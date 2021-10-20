@@ -12,7 +12,7 @@ export default function ajax(url, data = {}, type = "GET") {
             })
             if (dataStr != "") {
                 dataStr = dataStr.substring(0, dataStr.lastIndexOf("&"));
-                url += url + "?" + dataStr
+                url += "?" + dataStr
             }
             promise = Axios.get(url)
         } else {
